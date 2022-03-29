@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBn1wfpjjE5U57z5obOQjlkK48SX-fVwSQ",
@@ -17,11 +18,14 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig);
 
 const auth = getAuth(firebaseApp);
+console.log(auth)
 const db = getFirestore(firebaseApp);
+
 
 onAuthStateChanged(auth, user => {
   if (user != null){
     console.log('logged in!')
+
   } else {
     console.log('No user');
   }

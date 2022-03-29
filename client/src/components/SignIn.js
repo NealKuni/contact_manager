@@ -3,8 +3,9 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { Button } from "@material-ui/core";
 import { auth } from "../firebase.js";
 
+
 const SignIn = () => {
-  
+
   const signInWithGoogle = () => {
       const provider = new GoogleAuthProvider();
       signInWithPopup(auth, provider)
