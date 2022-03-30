@@ -5,20 +5,21 @@ import { Button } from "@material-ui/core";
 const SignOut = () => {
 
     const auth = getAuth();
-    const signOutHandler = (e) => {
+    // const signOutHandler = () => {
       
-      e.preventDefault();
-      signOut(auth).then(() => {
-          // Sign-out successful.
-        console.log('Sign-out successful')
-      }).catch((error) => {
-          // An error happened.
-      });
-    }
+    //   // e.preventDefault();
+    //   signOut(auth)
+    //   .then(() => {
+    //       // Sign-out successful.
+    //     console.log('Sign-out successful')
+    //   }).catch((error) => {
+    //       // An error happened.
+    //   });
+    // }
 
   return (
     <div>   
-      <Button onClick={(e) => signOutHandler}> Sign Out</Button>
+      <Button onClick={() => signOut(auth)}> Sign Out</Button>
     </div>
   )
 }
