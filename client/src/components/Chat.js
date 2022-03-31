@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { collection, query, orderBy } from "firebase/firestore"; 
+import { collection, query, where, limit } from "firebase/firestore";
 import SignOut from "./SignOut";
 import { db } from '../firebase';
 
 function Chat() {
   const [ messages, setMessages ] =  useState([])
-
+  
   useEffect(()=> {
-    db.collection('messages').orderBy()
+    const q = query(collection(db, "messages"), orderBy("desc"), limit(50)
+    
   }, [])
 
   return (
