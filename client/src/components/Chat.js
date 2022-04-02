@@ -15,6 +15,7 @@ function Chat() {
     <div>
       <SignOut/>
       Chat
+      Hello
     </div>
   )
 }
